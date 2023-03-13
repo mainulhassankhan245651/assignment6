@@ -1,29 +1,34 @@
 
-<!--Create an HTML form that allows users to input their name and email address.
-The form should have two fields: one for name and one for email.
-Use appropriate HTML tags to structure the form.
-
-Task 1: HTML Basics
+<!--
+Task 1: 
+Create an HTML form with the following fields:
+Name (text input)
+Email (text input)
+Password (password input)
+Profile Picture (file input)
+Submit Button
 -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Submission Project</title>
+	<title>User Registration Form</title>
 </head>
 <body>
-    <h1>Form Submission Project</h1>
-    <form action="submit.php" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
-        <!-- <label for="message">Message:</label>
-        <textarea id="message" name="message" ></textarea><br><br> -->
-        <input type="submit" value="Submit">
-    </form>
+	<form action="register.php" method="post" enctype="multipart/form-data">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required><br><br>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required><br><br>
+
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required><br><br>
+
+		<label for="profile_picture">Profile Picture:</label>
+		<input type="file" id="profile_picture" name="profile_picture" accept="image/*" required><br><br>
+
+		<input type="submit" value="Submit">
+	</form>
 </body>
 </html>
